@@ -6,7 +6,8 @@
       ],
 
       "buildpacks": [
-        { "url": "heroku-community/chrome-for-testing" }
+        { "url": "heroku-community/chrome-for-testing" },
+        { "url": "heroku/ruby" }
       ]
     }
   }
