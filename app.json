@@ -2,7 +2,11 @@
   "environments": {
     "test": {
       "addons": [
-        "heroku-postgresql"
+        "heroku-postgresql:in-dyno"
+      ],
+
+      "buildpacks": [
+        { "url": "heroku-community/chrome-for-testing" }
       ]
     }
   }
