@@ -8,7 +8,11 @@
       "buildpacks": [
         { "url": "heroku-community/chrome-for-testing" },
         { "url": "heroku/ruby" }
-      ]
+      ],
+
+      "env": {
+        "HEROKU_CI_POSTGRES_HEROKU_EXT_OFF": "true"
+      }
     }
   }
 }
