@@ -70,6 +70,14 @@ end
 # --------------------------------------------
 # Use a real browser for features.
 
+Capybara.register_driver :selenium_chrome do |app|
+  options = Selenium::WebDriver::Chrome::Options.new
+  options.add_argument('--headless')
+  options.add_argument('--no-sandbox')
+
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+end
+
 RSpec.configure do |config|
   config.before(:each) do |example|
     if example.metadata[:type] == :feature
