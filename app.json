@@ -12,6 +12,13 @@
 
       "env": {
         "HEROKU_CI_POSTGRES_HEROKU_EXT_OFF": "true"
+      },
+
+      "formation": {
+        "test": {
+          "quantity": 1,
+          "size": "standard-1x"
+        }
       }
     }
   }
